@@ -26,7 +26,7 @@ class TestCalculator < MiniTest::Test
 # sum takes an *array* of numbers and adds them all together
 # This one is a bit trickier!
   def test_computes_sum_of_empty_array
-    assert_equal(0, sum([]))
+    assert_equal 0, sum([])
   end
 
   def test_computes_sum_of_single_number
@@ -38,31 +38,39 @@ class TestCalculator < MiniTest::Test
   end
 
   def test_computes_sum_of_many_numbers
-    assert_equal 25, sum([1,3,5,7,9])
+    assert_equal 25, sum([1, 3, 5, 7, 9])
   end
 
   # Extra Credit:
   # If you feel you're up for the challenge, fill in the missing code in the tests below,
   # based off the descriptions, and get them to pass.
   def test_multiplies_two_numbers
+    assert_equal 10, times(2 , 5)
   end
 
   def test_multiplies_several_numbers
+    assert_equal 756, multi_muliply([2, 6, 7, 9])
   end
 
 # http://en.wikipedia.org/wiki/Factorial
   def test_computes_factorial_0
+    assert_equal 1, factorial(0)
   end
 
   def test_computes_factorial_1
+    assert_equal 1, factorial(1)
   end
 
   def test_computes_factorial_2
+    assert_equal 2, factorial(2)
   end
 
   def test_computes_factorial_5
+    assert_equal 120, factorial(5)
   end
 
   def test_computes_factorial_10
+    assert_equal 3628800, factorial(10)
   end
+
 end
